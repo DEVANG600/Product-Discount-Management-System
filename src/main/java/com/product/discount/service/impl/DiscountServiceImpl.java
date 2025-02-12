@@ -93,9 +93,9 @@ public class DiscountServiceImpl implements DiscountService {
 				totalDiscountedPrice=discountDto.getProductPrice();
 				if (discountDto.getDiscountValue()!=null && discountDto.getDiscountValue() > 0
 						&& discountDto.getProductPrice()!=null && discountDto.getProductPrice()>0) {
-					if(DiscountType.PERCENTAGE.equals(discountDto.getDiscountType())) {
+					if(DiscountType.PERCENTAGE.equals(discountDto.getDiscountType().trim())) {
 						totalDiscountedPrice -= discountDto.getProductPrice() * (discountDto.getDiscountValue() / 100);
-					}else if(DiscountType.FLAT.equals(discountDto.getDiscountType())) {
+					}else if(DiscountType.FLAT.equals(discountDto.getDiscountType().trim())) {
 						totalDiscountedPrice -= discountDto.getDiscountValue();
 					}
 		        } 
