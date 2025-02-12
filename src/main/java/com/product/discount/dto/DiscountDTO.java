@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class DiscountDTO {
 	
-	private Long productId;
+    private Long productId;
 	
     private String discountType;
     
